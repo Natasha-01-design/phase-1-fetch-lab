@@ -1,6 +1,7 @@
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
-  
+  return fetch("https://anapioficeandfire.com/api/books")
+    .then((resp) => resp.json())
+    .then((books) => renderBooks(books));
 }
 
 function renderBooks(books) {
@@ -15,3 +16,9 @@ function renderBooks(books) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks();
 });
+
+json[4].name;
+
+fetch(json[0].characters[1030]).then(r => r.json()).then(console.log);
+json.reduce((sum, book) => sum + book.numberOfPages, 0);
+
